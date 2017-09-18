@@ -1,4 +1,6 @@
-﻿using System.Security.Claims;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -14,6 +16,14 @@ namespace Portfolio.Persistence.Core.Models
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
             return userIdentity;
+        }
+
+        public string Name { get; set; }
+        public ICollection<Project> Projects { get; set; }
+
+        public ApplicationUser()
+        {
+            Projects = new Collection<Project>();
         }
     }
 }
