@@ -5,7 +5,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Portfolio.Models;
+using Portfolio.Persistence;
+using Portfolio.Persistence.Core.Models;
 
 namespace Portfolio
 {

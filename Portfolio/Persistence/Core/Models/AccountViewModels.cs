@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Portfolio.Models
+namespace Portfolio.Persistence.Core.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
